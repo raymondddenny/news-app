@@ -1,12 +1,13 @@
-# Flutter Testing Tutorial
+# My Learning App
 
-### Learn from :point_right: [this post](https://resocoder.com/flutter-testing-pt1) :point_left:.
+### This project is using by me for learning new stuffs about flutter.
 
-#### _Find more tutorials on [resocoder.com](https://resocoder.com)_
+#### Currently i'm learning about ##TESTING (Unit, Widget, Integration)##
 
 <br />
 <br />
 
-[![Reso Coder](https://resocoder.com/wp-content/uploads/2019/09/logo_with_text_signature.png)](https://resocoder.com)
-<br />
-_Be prepared for **real** app development_
+##### Credit to:
+
+- [Reso Coder](https://resocoder.com)
+  <br />
