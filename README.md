@@ -2,7 +2,7 @@
 
 ### This project is using by me for learning new stuffs about flutter.
 
-#### Currently i'm learning about ##TESTING (Unit, Widget, Integration)##
+#### Currently i'm learning about TESTING (Unit, Widget, Integration)
 
 <br />
 <br />
