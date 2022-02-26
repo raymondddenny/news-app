@@ -1,6 +1,4 @@
 import 'package:dio/dio.dart';
-import 'package:flutter_lorem/flutter_lorem.dart';
-import 'package:flutter_testing_tutorial/models/article.dart';
 
 /// A News service simulating communication with a server.
 class NewsService {
@@ -19,4 +17,7 @@ class NewsService {
   // }
 
   final Dio dio;
+  NewsService({
+    required this.dio,
+  });
 }

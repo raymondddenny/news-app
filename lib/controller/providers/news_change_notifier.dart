@@ -7,7 +7,7 @@ class NewsChangeNotifier extends ChangeNotifier {
 
   NewsChangeNotifier(this._newsService);
 
-  List<Article> _articles = [];
+  final List<Article> _articles = [];
 
   List<Article> get articles => _articles;
 
@@ -18,7 +18,7 @@ class NewsChangeNotifier extends ChangeNotifier {
     _isLoading = true;
     notifyListeners();
 
-    _articles = await _newsService.getArticles();
+    // _articles = await _newsService.getArticles();
     _isLoading = false;
     notifyListeners();
   }

@@ -1,11 +1,11 @@
-import 'dart:js';
-
 import 'package:flutter/material.dart';
+import 'package:flutter_testing_tutorial/controller/providers/user_change_notifier.dart';
+import 'package:flutter_testing_tutorial/services/dio/api_client/dio_api_client.dart';
+import 'package:flutter_testing_tutorial/services/req_rest/user_services.dart';
 import 'package:go_router/go_router.dart';
 import 'package:provider/provider.dart';
-import 'package:flutter_testing_tutorial/controller/providers/news_change_notifier.dart';
-import 'package:flutter_testing_tutorial/pages/news_page/news_page.dart';
-import 'package:flutter_testing_tutorial/services/news_service.dart';
+
+import 'pages/req_res_page/req_res_page.dart';
 
 void main() {
   final _router = GoRouter(
@@ -14,7 +14,7 @@ void main() {
           path: '/',
           pageBuilder: (context, state) => MaterialPage(
             key: state.pageKey,
-            child: const NewsPage(),
+            child: const ReqResPage(),
           ),
         ),
       ],
@@ -37,11 +37,11 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return ChangeNotifierProvider(
-      create: (_) => NewsChangeNotifier(NewsService()),
+      create: (_) => UserChangeNotifier(UserServices(dioApiClient: DioApiClient())),
       child: MaterialApp.router(
         routeInformationParser: router.routeInformationParser,
         routerDelegate: router.routerDelegate,
-        title: 'News App',
+        title: 'ReqRes App',
       ),
     );
   }
