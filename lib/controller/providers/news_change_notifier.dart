@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_testing_tutorial/article.dart';
-import 'package:flutter_testing_tutorial/news_service.dart';
+import 'package:flutter_testing_tutorial/models/article.dart';
+import 'package:flutter_testing_tutorial/services/news_service.dart';
 
 class NewsChangeNotifier extends ChangeNotifier {
   final NewsService _newsService;
 
   NewsChangeNotifier(this._newsService);
 
-  List<Article> _articles = [];
+  final List<Article> _articles = [];
 
   List<Article> get articles => _articles;
 
@@ -18,7 +18,7 @@ class NewsChangeNotifier extends ChangeNotifier {
     _isLoading = true;
     notifyListeners();
 
-    _articles = await _newsService.getArticles();
+    // _articles = await _newsService.getArticles();
     _isLoading = false;
     notifyListeners();
   }
